@@ -1,0 +1,109 @@
+:root{
+    --vermelho:#E50914;
+    --preta: #141414; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /*centralizar os items do container*/
+    justify-content: space-between; /*justificar os elementos, na horizontal*/
+
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family:'Arial Black', 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 15px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme/serie principal */
+.filme-principal{
+    font-size: 16px;
+    /*deixar a imagem do filme mais escuro 'degrade'*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url("img/twd.jpg");
+    height: 400px;
+    background-size: cover;
+
+    display: flex; /*jogar os elementos em linha*/
+    flex-direction: column;
+    justify-content: center; /*segue a direção do flex direction*/
+    align-items: flex-start; /*começar da esquerda*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px; /*da uma margem entre os botoes e a sinopse*/
+}
+
+.titulo{
+    margin-top: 10%;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    /*padding= aumentar o espaço interno da caixa nas 4 posições*/
+    padding: 15px 30px;
+    margin-right: 15px; /* mudar espaçamento entre os botoes*/
+    font-size: 12px;
+
+    cursor: pointer; /*indicar como pointer*/
+    transition: .3s ease all; /*transição dos botoes*/
+}
+
+.botao:hover{ /*inverter as cores do botão*/
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.container{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.filme-principal .container{
+    width: 70%; /*deixar os elementos do container mais limitados, organizados*/
+    
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px; /*desgrudar imagens*/
+}
